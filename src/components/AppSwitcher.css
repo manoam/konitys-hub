@@ -1,0 +1,27 @@
+.app-switcher {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.app-switcher-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.app-switcher-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.75rem;
+  color: #1f2937;
+}
+
+.app-switcher-header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}

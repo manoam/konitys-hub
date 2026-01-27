@@ -1,0 +1,64 @@
+.app-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.app-card:hover:not(.disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-color: var(--app-color);
+}
+
+.app-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.app-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--app-color), var(--app-color));
+  border-radius: 12px;
+  opacity: 0.15;
+}
+
+.app-card:hover:not(.disabled) .app-icon {
+  opacity: 0.25;
+}
+
+.app-info {
+  flex: 1;
+}
+
+.app-name {
+  margin: 0 0 4px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.app-description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.app-locked {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 1rem;
+}
