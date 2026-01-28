@@ -1,5 +1,12 @@
 import { App } from '../types';
 
+// URLs des applications externes (configurables via variables d'environnement)
+const APP_URLS = {
+  booth: process.env.REACT_APP_BOOTH_URL || 'https://konitys-booth-production.up.railway.app',
+  antenne: process.env.REACT_APP_ANTENNE_URL || 'https://konitys-antenne-production.up.railway.app',
+  admin: process.env.REACT_APP_ADMIN_URL || 'https://konitys-admin-production.up.railway.app',
+};
+
 export const apps: App[] = [
   {
     id: 'events',
@@ -18,7 +25,7 @@ export const apps: App[] = [
     path: '/apps/booth',
     roles: ['booth.read'],
     color: '#059669',
-    externalUrl: 'http://booth.konitys.fr',
+    externalUrl: APP_URLS.booth,
   },
   {
     id: 'stocks',
@@ -55,6 +62,16 @@ export const apps: App[] = [
     path: '/apps/antenne',
     roles: ['antenne.read'],
     color: '#0891B2',
-    externalUrl: 'http://antenne.konitys.fr',
+    externalUrl: APP_URLS.antenne,
+  },
+  {
+    id: 'admin',
+    name: 'Admin',
+    description: 'Administration du systeme',
+    icon: '??',
+    path: '/apps/admin',
+    roles: ['admin'],
+    color: '#374151',
+    externalUrl: APP_URLS.admin,
   },
 ];
