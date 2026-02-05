@@ -5,6 +5,8 @@ const APP_URLS = {
   booth: process.env.REACT_APP_BOOTH_URL || 'https://konitys-booth-production.up.railway.app',
   antenne: process.env.REACT_APP_ANTENNE_URL || 'https://konitys-antenne-production.up.railway.app',
   admin: process.env.REACT_APP_ADMIN_URL || 'https://konitys-admin-production.up.railway.app',
+  bornes: process.env.REACT_APP_BORNES_URL || 'https://konitys-bornes-production.up.railway.app',
+  antennesGeo: process.env.REACT_APP_ANTENNES_GEO_URL || 'https://konitys-antennes-geo-production.up.railway.app',
 };
 
 export const apps: App[] = [
@@ -73,5 +75,25 @@ export const apps: App[] = [
     roles: ['admin'],
     color: '#374151',
     externalUrl: APP_URLS.admin,
+  },
+  {
+    id: 'bornes',
+    name: 'Bornes',
+    description: 'Gestion des bornes',
+    icon: '🖥️',
+    path: '/apps/bornes',
+    roles: ['bornes.read'],
+    color: '#8B5CF6',
+    externalUrl: APP_URLS.bornes,
+  },
+  {
+    id: 'antennes-geo',
+    name: 'Antennes',
+    description: 'Gestion des antennes',
+    icon: '📡',
+    path: '/apps/antennes-geo',
+    roles: ['antennes.read'],
+    color: '#EC4899',
+    externalUrl: APP_URLS.antennesGeo,
   },
 ];
